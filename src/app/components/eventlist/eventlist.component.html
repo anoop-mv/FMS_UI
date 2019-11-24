@@ -1,0 +1,33 @@
+<div class="event-header">
+
+</div>
+<div class="eventlist-content">
+  <table border="1px solid" style="width: 70%;height: 100px;">
+    <th>
+      Action
+    </th> 
+    <th>
+      Event ID<br><input type="text" [(ngModel)]="eventIdSearch">
+    </th>
+      <th>
+          Month<br><input type="text" [(ngModel)]="monthSearch">
+      </th>
+      <th>
+          Base Location<br><input type="text" [(ngModel)]="baseLocSearch">
+      </th>
+      <th>
+        Council Name<br><input type="text" [(ngModel)]="councilNameSearch">
+    </th>
+    <th>
+        Beneficiary Name<br><input type="text" [(ngModel)]="beneficiaryNameSearch">
+    </th>
+    <tr *ngFor="let data of datalist | filter:eventIdSearch">
+      <td style="width:150px;"><button class="btn btn-primary" style="width:100px;"><i class="fa fa-eye" aria-hidden="true"></i>VIEW</button></td>
+      <td>{{data.inventory}}</td>
+      <td>{{data.unit_price}}</td>
+      <td>{{data.unit_price}}</td>
+      <td>{{data.unit_price}}</td>
+      <td>{{data.unit_price}}</td>
+    </tr>
+  </table>
+</div>

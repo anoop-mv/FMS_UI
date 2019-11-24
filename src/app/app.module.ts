@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { Ng2TableModule } from 'ng2-table/ng2-table';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -28,6 +30,7 @@ import { SendMailComponent } from './components/send-mail/send-mail.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ChartsModule } from 'ng2-charts'
 import { FeedbackReportComponent } from './components/feedback-report/feedback-report.component';
+import { EventlistComponent } from './components/eventlist/eventlist.component';
 const routes: Routes = [
   { path: '', redirectTo: "login", pathMatch: "full" },
   { path: 'login',          component: LoginPageComponent       },
@@ -43,6 +46,7 @@ const routes: Routes = [
   { path: 'datatable',      component: DatatablesLibraryComponent},
   { path: 'sendmail',       component: SendMailComponent        },
   { path: 'feedbackreport', component: FeedbackReportComponent  },
+  { path: 'eventlist',      component: EventlistComponent       },
   //{ path: 'sendmail',       component: SendMailComponent,           canActivate: [NeedAuthGuard]  },
 ];
 
@@ -63,6 +67,7 @@ const routes: Routes = [
     VolunteerNonpartComponent,
     SendMailComponent,
     FeedbackReportComponent,
+    EventlistComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,7 +87,9 @@ const routes: Routes = [
       innerStrokeColor: "#C7E596",
       animationDuration: 300
     }),
-    ChartsModule 
+    ChartsModule,
+    Ng2TableModule,
+    Ng2SearchPipeModule 
   ],
   providers: [NeedAdminGuard, NeedAuthGuard,HeaderComponent, { provide: HTTP_INTERCEPTORS, useClass: XhrInterceptor, multi: true }],
   bootstrap: [AppComponent]
