@@ -3,31 +3,48 @@
 </div>
 <div class="eventlist-content">
   <table border="1px solid" style="width: 70%;height: 100px;">
-    <th>
+    <th style="width:150px;">
       Action
     </th> 
     <th>
-      Event ID<br><input type="text" [(ngModel)]="eventIdSearch">
+      Event ID<br><input type="text" placeholder="filter column" [(ngModel)]="eventIdSearch">
     </th>
       <th>
-          Month<br><input type="text" [(ngModel)]="monthSearch">
+          Month<br><input type="text" placeholder="filter column" [(ngModel)]="monthSearch">
       </th>
       <th>
-          Base Location<br><input type="text" [(ngModel)]="baseLocSearch">
+          Base Location<br><input type="text" placeholder="filter column" [(ngModel)]="baseLocSearch">
       </th>
       <th>
-        Council Name<br><input type="text" [(ngModel)]="councilNameSearch">
+        Council Name<br><input type="text" placeholder="filter column" [(ngModel)]="councilNameSearch">
     </th>
     <th>
-        Beneficiary Name<br><input type="text" [(ngModel)]="beneficiaryNameSearch">
+        Beneficiary Name<br><input type="text" placeholder="filter column" [(ngModel)]="beneficiaryNameSearch">
     </th>
-    <tr *ngFor="let data of datalist | filter:eventIdSearch">
+  </table>
+  <table border="1px solid" style="width: 100%;height: 100px;">
+    <tr *ngFor="let data of datalist | filter:eventIdSearch:monthSearch">
       <td style="width:150px;"><button class="btn btn-primary" style="width:100px;"><i class="fa fa-eye" aria-hidden="true"></i>VIEW</button></td>
-      <td>{{data.inventory}}</td>
+      <td style="width: 100%;">
+        <tr>
+            <td>{{data.unit_price}}</td>
+            <td>{{data.unit_price}}</td>
+            <td>{{data.unit_price}}</td>
+            <td>{{data.unit_price}}</td>
+        </tr>
+        <tr><th>Event Name</th><td>name</td></tr>
+        <tr><th>Event Date</th><td>date</td></tr>
+        <tr><th>Business Unit</th><td>date</td></tr>
+        <tr><th>Status</th><td>date</td></tr>
+        <tr><th>Venue Address</th><td>date</td></tr>
+        <tr><th>Total Volunteers</th><td>date</td></tr>
+        <tr><th>Total Volunteers Hours</th><td>date</td></tr>
+        <tr><th>Total Travel Hours</th><td>date</td></tr>
+      </td>
+      <!-- <td>{{data.unit_price}}</td>
       <td>{{data.unit_price}}</td>
       <td>{{data.unit_price}}</td>
-      <td>{{data.unit_price}}</td>
-      <td>{{data.unit_price}}</td>
+      <td>{{data.unit_price}}</td> -->
     </tr>
   </table>
 </div>
