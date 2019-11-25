@@ -1,5 +1,6 @@
+<div class="event-list">
 <div class="event-header">
-
+<span>EVENTS</span>
 </div>
 <div class="eventlist-content">
   <table border="1px solid" style="width: 70%;height: 100px;">
@@ -24,14 +25,15 @@
   </table>
   <table border="1px solid" style="width: 100%;height: 100px;">
     <tr *ngFor="let data of datalist | filter:eventIdSearch:monthSearch">
-      <td style="width:150px;"><button class="btn btn-primary" style="width:100px;"><i class="fa fa-eye" aria-hidden="true"></i>VIEW</button></td>
+      <td style="width:150px;"><button class="btn btn-primary" style="width:100px;background-color: #0039a6;"><i class="fa fa-eye" aria-hidden="true"></i>VIEW</button></td>
       <td style="width: 100%;">
-        <tr>
+        <tr style="width: 100%;">
             <td>{{data.unit_price}}</td>
             <td>{{data.unit_price}}</td>
             <td>{{data.unit_price}}</td>
             <td>{{data.unit_price}}</td>
         </tr>
+        <table>
         <tr><th>Event Name</th><td>name</td></tr>
         <tr><th>Event Date</th><td>date</td></tr>
         <tr><th>Business Unit</th><td>date</td></tr>
@@ -40,6 +42,7 @@
         <tr><th>Total Volunteers</th><td>date</td></tr>
         <tr><th>Total Volunteers Hours</th><td>date</td></tr>
         <tr><th>Total Travel Hours</th><td>date</td></tr>
+        </table>
       </td>
       <!-- <td>{{data.unit_price}}</td>
       <td>{{data.unit_price}}</td>
@@ -47,4 +50,5 @@
       <td>{{data.unit_price}}</td> -->
     </tr>
   </table>
+</div>
 </div>
