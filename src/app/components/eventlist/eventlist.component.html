@@ -25,7 +25,8 @@
   </table>
   <table border="1px solid" style="width: 100%;height: 100px;">
     <tr *ngFor="let data of datalist | filter:eventIdSearch:monthSearch">
-      <td style="width:150px;"><button class="btn btn-primary" style="width:100px;background-color: #0039a6;"><i class="fa fa-eye" aria-hidden="true"></i>VIEW</button></td>
+      <td style="width:150px;">
+        <button class="btn btn-primary" style="width:100px;background-color: #0039a6;" (click)="eventDetails()"><i class="fa fa-eye" aria-hidden="true"></i>VIEW</button></td>
       <td style="width: 100%;">
         <tr style="width: 100%;">
             <td>{{data.unit_price}}</td>

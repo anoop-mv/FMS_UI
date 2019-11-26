@@ -31,6 +31,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ChartsModule } from 'ng2-charts'
 import { FeedbackReportComponent } from './components/feedback-report/feedback-report.component';
 import { EventlistComponent } from './components/eventlist/eventlist.component';
+import { EventComponent } from './components/event/event.component';
 const routes: Routes = [
   { path: '', redirectTo: "login", pathMatch: "full" },
   { path: 'login',          component: LoginPageComponent       },
@@ -47,6 +48,7 @@ const routes: Routes = [
   { path: 'sendmail',       component: SendMailComponent        },
   { path: 'feedbackreport', component: FeedbackReportComponent  },
   { path: 'eventlist',      component: EventlistComponent       },
+  { path: 'event',          component: EventComponent           },
   //{ path: 'sendmail',       component: SendMailComponent,           canActivate: [NeedAuthGuard]  },
 ];
 
@@ -68,6 +70,7 @@ const routes: Routes = [
     SendMailComponent,
     FeedbackReportComponent,
     EventlistComponent,
+    EventComponent,
   ],
   imports: [
     BrowserModule,
