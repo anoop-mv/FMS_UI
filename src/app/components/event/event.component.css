@@ -1,0 +1,35 @@
+svg.svg-inline--fa.fa-times-circle.fa-w-16 {
+    background: white;
+    color: red;
+    border-radius: 10px;
+    margin: 5px;
+}
+svg.svg-inline--fa.fa-minus-circle.fa-w-16.minus-icon {
+    background-color: white;
+    color: orange;
+    border-radius: 10px;
+    margin: 5px;
+}
+.participation-table
+{
+    width: 100%;
+    padding: 0px 5px;
+    border: 1px solid green;
+    border-radius: 6px;
+}
+.not-participated-cotent {
+    border: 1px solid green;
+    border-radius: 6px;
+    padding: 10px;
+}
+.not-participated-cotent p{
+   margin: 0;
+}
+p.boder-bt{
+    border-bottom: 1px solid;
+    border-color: #b3b5b3;
+}
+.participation-table p{
+    margin: 0;
+    padding: 5px;
+}

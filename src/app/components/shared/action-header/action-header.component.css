@@ -1,0 +1,63 @@
+.actionBox{
+    margin: 25px;
+    
+}
+.actionHead{
+    width:100%;
+    background-color: #0039A6;
+    color: #ffffff;
+        padding: 2px 15px;
+}
+.row{
+    margin: 0;
+}
+
+.ABcol{
+    height: auto;
+    margin-top: 1%;
+    max-width: 48% !important;
+    margin-left: 1%;
+
+}
+.ABcolLeft{
+    background-color: #B3E6E6;
+}
+.ABcolRight{
+    background-color: #FCE1BA;   
+}
+.b{
+    border: solid thin;
+}
+.col-md-6{
+    width: 90% !important;
+}
+.actContent *{
+    padding: 0% !important;
+}
+
+.ActFont{
+    font-size: 16px;
+    font-weight: bolder;
+}
+.green{
+    color: #00575A
+}
+.orange{
+    color: #804D09;
+}
+.ActFontSm{
+    font-size: 10px !important;
+}
+.alignRight{
+     text-align: right !important;
+     
+ }
+ .txtbox{
+     border: none;
+ }
+ .width{
+     width: 100% !important;
+ }
+ .btnAction{
+     
+ }

@@ -51,10 +51,12 @@
   float: right;
 }
 .heading{
-    font-size: 18px !important;
+    font-size: 14px !important;
     padding-top: 7px;
     padding-bottom: 7px;
-    background-color: #c7c7c7b8 !important;
+    color: #ffffff;
+    padding-left: 2%;
+    /*background-color: #c7c7c7b8 !important;*/
 }
 .box{
   margin: 25px;
@@ -68,7 +70,22 @@
   color: white;
 }
 .box-content{
-  padding-top: 15px;
+  padding: 15px;
+  background-color: white;
+  padding-bottom: 20px;
+}
+.blue-table-header th {
+  background-color: #0039a6;
+  color: white;
+}
+div .dataTables_length {
+  display: none;
+}
+div .dataTables_length {
+  display: none;
+}
+.dataTables_filter label{
+  display: none;
 }
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 
@@ -90,4 +107,11 @@
     font-size: 11px !important;
   }
   
+}
+.bg-light1{
+  background-color: #0039a6 !important;
+  text-align: left;
+}
+button{
+  font-size: 12px !important;
 }

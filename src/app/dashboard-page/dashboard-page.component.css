@@ -62,7 +62,7 @@
 }
 .tile-footer {
     background-color: rgba(0, 0, 0, 0.1);
-    color: rgba(255, 255, 255, 0.5);
+    color:white;
     display: block;
     padding: 5px;
     transition: all 0.3s ease-in-out 0s;

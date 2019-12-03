@@ -13,3 +13,7 @@
 .eventlist-content{
     padding-top: 50px;
 }
+.borderless td, .borderless th {
+    border: none;
+    background: transparent;
+}

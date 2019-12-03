@@ -9,7 +9,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
+import { FooterComponent }       from './components/shared/footer/footer.component';
+import { ActionHeaderComponent } from './components/shared/action-header/action-header.component';
 import { FormUploadComponent } from './components/upload/form-upload/form-upload.component';
 import { DataTablesModule } from 'angular-datatables';
 import { AddAdminComponent } from './components/add-admin/add-admin.component';
@@ -32,6 +33,9 @@ import { ChartsModule } from 'ng2-charts'
 import { FeedbackReportComponent } from './components/feedback-report/feedback-report.component';
 import { EventlistComponent } from './components/eventlist/eventlist.component';
 import { EventComponent } from './components/event/event.component';
+import { FeedbackQuestionsComponent } from './question/feedback-questions/feedback-questions.component';
+import { FeedbackQuestAddComponent } from './question/feedback-quest-add/feedback-quest-add.component';
+import { FeedbackQuestEditComponent } from './question/feedback-quest-edit/feedback-quest-edit.component';
 const routes: Routes = [
   { path: '', redirectTo: "login", pathMatch: "full" },
   { path: 'login',          component: LoginPageComponent       },
@@ -49,6 +53,9 @@ const routes: Routes = [
   { path: 'feedbackreport', component: FeedbackReportComponent  },
   { path: 'eventlist',      component: EventlistComponent       },
   { path: 'event',          component: EventComponent           },
+  { path: 'feedbackQuestion',component: FeedbackQuestionsComponent},
+  { path: 'FeedbackQuestAdd',component: FeedbackQuestAddComponent},
+  { path: 'FeedbackQuestEdit/:id',component: FeedbackQuestEditComponent},
   //{ path: 'sendmail',       component: SendMailComponent,           canActivate: [NeedAuthGuard]  },
 ];
 
@@ -58,6 +65,7 @@ const routes: Routes = [
     DashboardPageComponent,
     HeaderComponent,
     FooterComponent,
+    ActionHeaderComponent,
     FormUploadComponent,
     AddAdminComponent,
     AddPmoComponent,
@@ -71,6 +79,9 @@ const routes: Routes = [
     FeedbackReportComponent,
     EventlistComponent,
     EventComponent,
+    FeedbackQuestionsComponent,
+    FeedbackQuestAddComponent,
+    FeedbackQuestEditComponent,
   ],
   imports: [
     BrowserModule,
