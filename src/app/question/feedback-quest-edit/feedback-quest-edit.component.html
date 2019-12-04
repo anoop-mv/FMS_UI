@@ -1,60 +1,61 @@
-<div class="text-center " style="padding: 5px;">
-  <div class="bg-light1"><!--alert alert-danger-->
-    <h2 class="heading">Edit Question</h2>
+<div class="box">
+  <div class="box-header"><!--alert alert-danger-->
+    <span>Edit Question</span>
   </div>
+<div class="box-content">
+    <div class="row martop">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">Feedback Type</div>
+        <div class="custom-control custom-radio">
+            <input type="radio" name="feedbackType" value="participated">Participated
+            <input type="radio" name="feedbackType" value="notParticipated">Not Participated
+            <input type="radio" name="feedbackType" value="unregisterd">Unregisterd
+        </div>
+      </div>
+      <div class="row  martop">
+        <div class="col-md-1"></div>
+        <div class="col-md-2"><input type="checkbox" name="multipleAnswer">Allow multiple Answer</div>
+      </div>
+      <div class="row  martop">
+        <div class="col-md-1"></div>
+        <div class="col-md-2"><input type="checkbox" name="freeText">Free Text Answer</div>
+      </div>
+      <div class="row  martop">
+        <div class="col-md-1"></div>
+        <div class="col-md-2"><input type="checkbox" name="customQuest">Custom Question</div>
+      </div>
+      <div class="row  martop">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">Question</div>
+        <div class="col-md-6">
+          <input type="text" class="txt" placeholder="Description (required)">
+        </div>
+      </div>
+      
+        <div *ngFor="let ans of answers;let i = index" class="row martop" id="row{{i+1}}">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">Answer {{i+1}}</div>
+          <div class="col-md-6">
+           <input type="text" style="border:solid thin lightgrey ;width: 100%;" placeholder="Enter Answer {{i+1}}">
+          </div>
+          <div class="col-md-1"><button type="button" id="row{{i}}" class="btn"  (click)="deleteAnswer(i+1)" style="background-color: #ff8f1c;font-size: 11px !important;"><i class="fa fa-trash"></i> DELETE ANSWER</button></div>
+        </div>
+      
+      <div class="AnswerDiv" #div></div>
+      
+      <div class="row  martop">
+        <div class="col-md-1"></div>
+        <div class="col-md-2"><button type="button" class="btn btn-success" (click)="addAnswer()" style="margin: auto"><i class="fa fa-plus-square"></i> ADD ANSWER</button></div>
+      </div>
+      
+      <div class="row  martop">
+        <div class="col-md-1"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+            <button type="button" class="btn btn-success"   (click)="saveAnswer()"><i class="fa fa-pencil-square-o"></i> SAVE</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-secondary" [routerLink]="'/feedbackQuestion'"><i class="fa fa-ban"></i> CANCEL</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-danger"    (click)="removeAnswer()"><i class="fa fa-trash"></i> DELETE</button>
+        </div>
+      </div>
 </div>
-
-<div class="row martop">
-  <div class="col-md-1"></div>
-  <div class="col-md-2">Feedback Type</div>
-  <div class="custom-control custom-radio">
-      <input type="radio" name="feedbackType" value="participated">Participated
-      <input type="radio" name="feedbackType" value="notParticipated">Not Participated
-      <input type="radio" name="feedbackType" value="unregisterd">Unregisterd
-  </div>
-</div>
-<div class="row  martop">
-  <div class="col-md-1"></div>
-  <div class="col-md-2"><input type="checkbox" name="multipleAnswer">Allow multiple Answer</div>
-</div>
-<div class="row  martop">
-  <div class="col-md-1"></div>
-  <div class="col-md-2"><input type="checkbox" name="freeText">Free Text Answer</div>
-</div>
-<div class="row  martop">
-  <div class="col-md-1"></div>
-  <div class="col-md-2"><input type="checkbox" name="customQuest">Custom Question</div>
-</div>
-<div class="row  martop">
-  <div class="col-md-1"></div>
-  <div class="col-md-2">Question</div>
-  <div class="col-md-6">
-    <input type="text" class="txt" placeholder="Description (required)">
-  </div>
-</div>
-
-  <div *ngFor="let ans of answers;let i = index" class="row martop" id="row{{i+1}}">
-    <div class="col-md-1"></div>
-    <div class="col-md-2">Answer {{i+1}}</div>
-    <div class="col-md-6">
-     <input type="text" style="border:solid thin lightgrey ;width: 100%;" placeholder="Enter Answer {{i+1}}">
-    </div>
-    <div class="col-md-1"><button type="button" id="row{{i}}" class="btn btn-warning"  (click)="deleteAnswer(i+1)" style="font-size: 11px !important;"><i class="fa fa-trash"></i> Delete Answer</button></div>
-  </div>
-
-<div class="AnswerDiv" #div></div>
-
-<div class="row  martop">
-  <div class="col-md-1"></div>
-  <div class="col-md-2"><button type="button" class="btn btn-success" (click)="addAnswer()" style="margin: auto"><i class="fa fa-plus-square"></i> Add Answer</button></div>
-</div>
-
-<div class="row  martop">
-  <div class="col-md-1"></div>
-  <div class="col-md-2"></div>
-  <div class="col-md-6">
-      <button type="button" class="btn btn-success"   (click)="saveAnswer()"><i class="fa fa-pencil-square-o"></i> Save</button>&nbsp;&nbsp;
-      <button type="button" class="btn btn-secondary" [routerLink]="'/feedbackQuestion'"><i class="fa fa-ban"></i> Cancel</button>&nbsp;&nbsp;
-      <button type="button" class="btn btn-danger"    (click)="removeAnswer()"><i class="fa fa-trash"></i> Delete</button>
-  </div>
 </div>

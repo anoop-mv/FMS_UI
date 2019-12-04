@@ -20,10 +20,11 @@
       <tbody>
        <tr *ngFor="let data of datalist | filter:eventIdSearch:monthSearch">
             <td style="width:150px;"> <button class="btn btn-primary" style="width:100px;background-color: #0039a6;" (click)="eventDetails()"><i class="fa fa-eye" aria-hidden="true"></i>VIEW</button></td>
+            <td>{{data.id}}</td>
+            <td>{{data.month}}</td>
             <td>{{data.unit_price}}</td>
             <td>{{data.unit_price}}</td>
-            <td>{{data.unit_price}}</td>
-            <td>{{data.unit_price}}</td>
+            <div class="event-data"></div>
       </tr>        
     </tbody>
   </table>

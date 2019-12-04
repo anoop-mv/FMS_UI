@@ -14,9 +14,9 @@ export class EventlistComponent implements OnInit {
   //nameSearch="";
   ngOnInit() {
     this.datalist= [
-      { id:1, name: "view",  inventory: 5,   unit_price: 45.99  },
-      { id:1, name: "view",  inventory: 10,  unit_price: 123.75 },
-      { id:1, name: "view",  inventory: 2,   unit_price: 399.50 }
+      { id:1, month: "jan",  inventory: 5,   unit_price: 45.99  },
+      { id:2, month: "feb",  inventory: 10,  unit_price: 123.75 },
+      { id:3, month: "jun",  inventory: 2,   unit_price: 399.50 }
     ];
   }
   eventDetails(){

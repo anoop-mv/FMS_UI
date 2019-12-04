@@ -33,3 +33,37 @@ p.boder-bt{
     margin: 0;
     padding: 5px;
 }
+.participation-box{
+    width: 31%;
+    float: left;
+}
+.not-participated-box{
+    width: 30%;
+    float: left;
+}
+.unregistered-box{
+    width: 31%;
+    float: left;
+}
+.two-box{
+    width: 47%;
+    float: left;
+}
+@media screen and (max-width: 500px) {
+    .participation-box{
+        width: auto;
+        float: none;
+    }
+    .not-participated-box{
+        width: auto;
+    float: none;
+    }
+    .unregistered-box{
+        width: auto;
+        float: none;
+    }
+    .two-box{
+        width: none;
+        float: none;
+    }
+}

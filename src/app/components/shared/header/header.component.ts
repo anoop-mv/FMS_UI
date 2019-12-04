@@ -31,6 +31,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.role=localStorage.getItem('role');
+    $(".nav-item").on("click", function(){
+    //$(".nav-item").find(".active").removeClass("active");
+    $("li.nav-item.active").removeClass("active");
+    $(this).addClass("active");
+});
   }
 
   loader(status){
