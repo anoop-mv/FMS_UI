@@ -60,6 +60,9 @@ p.boder-bt{
     padding: 20px;
     border-radius: 0 0 6px 6px;
 }
+.width-48p{
+    max-width: 48%;
+}
 @media screen and (max-width: 500px) {
     .participation-box{
         width: auto;
@@ -76,5 +79,8 @@ p.boder-bt{
     .two-box{
         width: none;
         float: none;
+    }
+    .width-48p{
+        max-width: none;
     }
 }

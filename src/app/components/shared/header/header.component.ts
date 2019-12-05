@@ -13,9 +13,11 @@ export class HeaderComponent implements OnInit {
   isAdminHidden: boolean = false;
   isPmoHidden: boolean = false;
   isPocHidden: boolean = false;
+  isAdmin:boolean=false;
   role:string="";
 
   constructor(private adminService: AdminService, private pmoService: PmoService, private pocService: PocService) {
+    this.isAdmin=this.adminService.isAdmin();
     if (this.adminService.isAdmin()) {
       this.isAdminHidden = !this.isAdminHidden;
       this.isPmoHidden = !this.isPmoHidden;
