@@ -20,11 +20,29 @@
       <tbody>
        <tr *ngFor="let data of datalist | filter:eventIdSearch:monthSearch">
             <td style="width:150px;"> <button class="btn btn-primary" style="width:100px;background-color: #0039a6;" (click)="eventDetails()"><i class="fa fa-eye" aria-hidden="true"></i>VIEW</button></td>
-            <td>{{data.id}}</td>
+            <td colspan="5">
+                <table>
+                <tr style="width: 100%;">
+                    <td style="width: 15%;">{{data.unit_price}}</td>
+                    <td style="width: 15%;">{{data.unit_price}}</td>
+                    <td style="width: 15%;">{{data.unit_price}}</td>
+                    <td style="width: 15%;">{{data.unit_price}}</td>
+                </tr>
+                <tr><th>Event Name</th><td>name</td></tr>
+                <tr><th>Event Date</th><td>date</td></tr>
+                <tr><th>Business Unit</th><td>date</td></tr>
+                <tr><th>Status</th><td>date</td></tr>
+                <tr><th>Venue Address</th><td>date</td></tr>
+                <tr><th>Total Volunteers</th><td>date</td></tr>
+                <tr><th>Total Volunteers Hours</th><td>date</td></tr>
+                <tr><th>Total Travel Hours</th><td>date</td></tr>
+                </table>
+            </td>
+            <!-- <td>{{data.id}}</td>
             <td>{{data.month}}</td>
             <td>{{data.unit_price}}</td>
             <td>{{data.unit_price}}</td>
-            <div class="event-data"></div>
+            <div class="event-data"></div> -->
       </tr>        
     </tbody>
   </table>

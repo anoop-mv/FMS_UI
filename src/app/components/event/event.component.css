@@ -49,6 +49,17 @@ p.boder-bt{
     width: 47%;
     float: left;
 }
+.row.blueLine.rowstyle {
+    background-color: #0039a6;
+    padding: 20px;
+    border-radius: 6px 6px 0px 0px;
+    color: white;
+}
+.gray-footer-box{
+    background-color: lightgrey;
+    padding: 20px;
+    border-radius: 0 0 6px 6px;
+}
 @media screen and (max-width: 500px) {
     .participation-box{
         width: auto;
